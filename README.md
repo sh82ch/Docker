@@ -38,22 +38,11 @@ Content-Type: application/json
 
 ## Документация по проекту
 
-Для запуска проекта необходимо:
+Для запуска контейнера необходимо:
+Выполнить команду в терминале
+`docker build -t my_django_app`
+`docker run -p 8000:8000 my_django_app`
 
-Установить зависимости:
+Для остановки контейнера можно воспользоваться командой:
+`docker stop my_django_app`
 
-```bash
-pip install -r requirements.txt
-```
-
-Вам необходимо будет создать базу в postgres и прогнать миграции:
-
-```base
-manage.py migrate
-```
-
-Выполнить команду:
-
-```bash
-python manage.py runserver
-```
